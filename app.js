@@ -1,12 +1,9 @@
 const express = require('express');
-const fs = require('fs');
+
 const app = express();
 
 // Create the ./tmp/ directory if it doesn't exist
-const tmpDir = './tmp';
-if (!fs.existsSync(tmpDir)) {
-  fs.mkdirSync(tmpDir);
-}
+
 
 app.post('/generateVAST', (req, res) => {
   const videoLink = req.query.videoLink;
